@@ -1,7 +1,7 @@
 using System.Text;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Recorder.Audio;
+namespace Transcriber.Recorder.Audio;
 
 /// <summary>
 /// Minimal RIFF/WAVE writer. Supports PCM16, IEEE float32 and extensible

@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 /// <summary>Outcome of one transcription run for a call directory.</summary>
 public sealed record TranscriptionOutcome(

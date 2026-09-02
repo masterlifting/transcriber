@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 /// <summary>A discovered call directory shown in the Recent Calls list.</summary>
 public sealed record RecentCall(

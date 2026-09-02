@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 /// <summary>
 /// OS-backed exclusive file lock for one call directory's transcription.

@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace LocalTranscriber.Core;
+namespace Transcriber.Core;
 
 /// <summary>
 /// Child-process helpers shared by CLI and Desktop. The recorder child is

@@ -1,7 +1,7 @@
 using System.Windows.Media;
-using LocalTranscriber.Core.Operations;
+using Transcriber.Core.Operations;
 
-namespace LocalTranscriber.Desktop.Models;
+namespace Transcriber.Desktop.Models;
 
 /// <summary>Row model for the Recent Calls list.</summary>
 public sealed class RecentCallViewModel

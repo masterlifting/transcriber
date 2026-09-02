@@ -1,10 +1,10 @@
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using LocalTranscriber.Recorder.Audio;
-using LocalTranscriber.Recorder.Diagnostics;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Recorder.Audio;
+using Transcriber.Recorder.Diagnostics;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Recorder.ProcessAudio;
+namespace Transcriber.Recorder.ProcessAudio;
 
 /// <summary>
 /// Captures audio rendered by a specific process tree using Windows process

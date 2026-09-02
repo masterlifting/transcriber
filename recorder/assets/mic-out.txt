@@ -1,14 +1,14 @@
-[21:50:10.327] [INF] Recording microphone ('Microphone') -> D:\local-transcriber\recorder\assets\mic-test.wav. Press Ctrl+C to stop. Auto-stop after 25s.
+[21:50:10.327] [INF] Recording microphone ('Microphone') -> D:\transcriber\recorder\assets\mic-test.wav. Press Ctrl+C to stop. Auto-stop after 25s.
 [21:50:10.391] [INF] Starting microphone capture: Microphone Array (Intelr Smart Sound Technology for Digital Microphones) (id: {0.0.1.00000000}.{1abddfc1-c7f6-4f78-af0e-1ff4033c205f})
 [21:50:10.573] [INF] Capture format: 48000 Hz, 2 ch, IEEE float 32
 [21:50:10.581] [INF] Microphone capture started
 [21:50:35.363] [INF] Stop requested
 [21:50:35.367] [INF] Microphone capture stopped
 [21:50:35.370] [INF] Recorded 0:00:24.78 of audio
-[21:50:35.371] [INF] Output: D:\local-transcriber\recorder\assets\mic-test.wav
+[21:50:35.371] [INF] Output: D:\transcriber\recorder\assets\mic-test.wav
 
 Device     : Microphone Array (Intelr Smart Sound Technology for Digital Microphones)
 Device ID  : {0.0.1.00000000}.{1abddfc1-c7f6-4f78-af0e-1ff4033c205f}
 Format     : 48000 Hz, 2 ch, IEEE float 32
 Duration   : 0:00:24.7846561
-Output     : D:\local-transcriber\recorder\assets\mic-test.wav
+Output     : D:\transcriber\recorder\assets\mic-test.wav

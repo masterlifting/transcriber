@@ -1,8 +1,8 @@
 using System.Runtime.InteropServices;
-using LocalTranscriber.Recorder.Diagnostics;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Recorder.Diagnostics;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Recorder.ProcessAudio;
+namespace Transcriber.Recorder.ProcessAudio;
 
 /// <summary>
 /// Native interop for Windows process-loopback activation:

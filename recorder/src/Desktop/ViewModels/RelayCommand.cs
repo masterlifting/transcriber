@@ -1,6 +1,6 @@
 using System.Windows.Input;
 
-namespace LocalTranscriber.Desktop.ViewModels;
+namespace Transcriber.Desktop.ViewModels;
 
 public sealed class RelayCommand : ICommand
 {

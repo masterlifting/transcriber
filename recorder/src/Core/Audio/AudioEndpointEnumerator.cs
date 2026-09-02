@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Core.Audio;
+namespace Transcriber.Core.Audio;
 
 public sealed class AudioEndpointInfo
 {

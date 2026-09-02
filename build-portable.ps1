@@ -1,4 +1,4 @@
-# Builds the portable Windows distribution (Full) for Local Transcriber.
+# Builds the portable Windows distribution (Full) for Transcriber.
 #
 #   .\build-portable.ps1
 #
@@ -11,7 +11,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$Root       = "D:\local-transcriber"
+$Root       = "D:\transcriber"
 $Artifacts  = "$Root\artifacts\portable\win-x64"
 $Version    = "1.0.0"
 $PythonVer  = "3.12.10"
@@ -58,7 +58,7 @@ function Build-Variant([string]$Variant) {
 
     # ---- 1. .NET self-contained publish (all three exes share the staging root) ----
     Invoke-Step "Publish Desktop (self-contained win-x64)" {
-        & $dotnet publish "$Root\recorder\src\Desktop\LocalTranscriber.Desktop.csproj" `
+        & $dotnet publish "$Root\recorder\src\Desktop\Transcriber.Desktop.csproj" `
             -c Release -r win-x64 --self-contained true -o $staging | Out-Null
     }
     Invoke-Step "Publish Recorder (self-contained win-x64)" {
@@ -135,7 +135,7 @@ Lib\site-packages
     Set-Content "$staging\.portable-mode" $Variant -Encoding ASCII
     Invoke-Step "Write manifests" {
         @"
-Local Transcriber: $Version
+Transcriber: $Version
 .NET: 10 self-contained (win-x64)
 Python: $PythonVer (embeddable)
 faster-whisper: 1.2.1
@@ -148,7 +148,7 @@ Build date: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss zzz")
 "@ | Set-Content "$staging\VERSION.txt" -Encoding UTF8
 
         $notices = @"
-Local Transcriber - Third-Party Notices
+Transcriber - Third-Party Notices
 
 This distribution bundles the following third-party components.
 Full license texts are shipped in the licenses\ folder and inside each
@@ -197,7 +197,7 @@ Python license text (PSF): https://docs.python.org/3/license.html
         Set-Content "$staging\THIRD-PARTY-NOTICES.txt" $notices -Encoding UTF8
 
         @"
-Local Transcriber
+Transcriber
 
 Requirements:
 - Windows 11 x64
@@ -206,7 +206,7 @@ Requirements:
 - supported call application
 
 Run:
-LocalTranscriber.Desktop.exe
+Transcriber.Desktop.exe
 
 Validated:
 - Telegram Desktop
@@ -216,8 +216,8 @@ Known limitation:
 - Bluetooth HFP may be unreliable
 
 Data:
-- Calls: Documents\LocalTranscriber\Calls
-- Settings/logs: LocalAppData\LocalTranscriber
+- Calls: Documents\Transcriber\Calls
+- Settings/logs: LocalAppData\Transcriber
 "@ | Set-Content "$staging\README.txt" -Encoding UTF8
 
         Get-WheelLicenseFiles "$staging\python\Lib\site-packages" "$staging\licenses"
@@ -225,7 +225,7 @@ Data:
 
     # ---- 7. ZIP + SHA-256 ----
     Invoke-Step "Create ZIP" {
-        $zipName = "LocalTranscriber-win-x64-full.zip"
+        $zipName = "Transcriber-win-x64-full.zip"
         $zipPath = "$Artifacts\$zipName"
         if (Test-Path $zipPath) { Remove-Item -LiteralPath $zipPath -Force }
         Add-Type -AssemblyName System.IO.Compression.FileSystem

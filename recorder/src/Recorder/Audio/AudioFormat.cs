@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Recorder.Audio;
+namespace Transcriber.Recorder.Audio;
 
 /// <summary>
 /// Parsed audio format. The raw WAVEFORMATEX/WAVEFORMATEXTENSIBLE pointer

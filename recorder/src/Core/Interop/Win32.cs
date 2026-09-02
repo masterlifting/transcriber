@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace LocalTranscriber.Core.Interop;
+namespace Transcriber.Core.Interop;
 
 /// <summary>
 /// Constants, structs, P/Invoke declarations and COM interfaces for the WASAPI

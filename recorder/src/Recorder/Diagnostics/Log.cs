@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Recorder.Diagnostics;
+namespace Transcriber.Recorder.Diagnostics;
 
 /// <summary>Minimal timestamped console logger. No external logging framework.</summary>
 public static class Log

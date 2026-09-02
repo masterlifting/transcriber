@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core;
+namespace Transcriber.Core;
 
 /// <summary>Pre-flight checks before recording or transcription.</summary>
 public static class DependencyValidator
@@ -9,7 +9,7 @@ public static class DependencyValidator
         {
             throw new DependencyException(
                 $"recorder executable not found: {Paths.RecorderExe} " +
-                "(build it with: dotnet build D:\\local-transcriber\\recorder\\LocalTranscriber.Recorder.sln)");
+                "(build it with: dotnet build D:\\transcriber\\recorder\\Transcriber.Recorder.sln)");
         }
     }
 
