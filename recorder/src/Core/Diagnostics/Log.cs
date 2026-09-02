@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core.Diagnostics;
+namespace Transcriber.Core.Diagnostics;
 
 /// <summary>Minimal timestamped console logger (shared by CLI-side tooling).</summary>
 public static class Log

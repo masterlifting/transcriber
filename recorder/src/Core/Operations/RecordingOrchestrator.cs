@@ -1,10 +1,10 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Text.Json;
-using LocalTranscriber.Core.Audio;
-using LocalTranscriber.Core.Processes;
+using Transcriber.Core.Audio;
+using Transcriber.Core.Processes;
 
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 public sealed record RecordingRequest(
     string? ProcessName,

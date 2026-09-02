@@ -1,6 +1,6 @@
-using LocalTranscriber.Core.Settings;
+using Transcriber.Core.Settings;
 
-namespace LocalTranscriber.Core;
+namespace Transcriber.Core;
 
 public enum AppMode
 {
@@ -14,13 +14,13 @@ public enum AppMode
 /// (extracted anywhere) and as a development checkout.
 ///
 /// Layouts:
-///   Portable:  &lt;AppRoot&gt;\{LocalTranscriber.Desktop.exe, recorder.exe,
+///   Portable:  &lt;AppRoot&gt;\{Transcriber.Desktop.exe, recorder.exe,
 ///              python\python.exe, pipeline\, models\turbo}
-///   Development: &lt;AppRoot&gt; = project root (D:\local-transcriber) with
+///   Development: &lt;AppRoot&gt; = project root (D:\transcriber) with
 ///              .venv\Scripts\python.exe and recorder\src\Recorder\bin\...
 ///
 /// User data (settings, logs, calls) is always written OUTSIDE AppRoot:
-/// %LOCALAPPDATA%\LocalTranscriber and Documents\LocalTranscriber\Calls
+/// %LOCALAPPDATA%\Transcriber and Documents\Transcriber\Calls
 /// (portable default; development keeps its project-local calls folder).
 /// </summary>
 public static class Paths
@@ -43,7 +43,7 @@ public static class Paths
     // ---------------- executables ----------------
 
     public static string RecorderExe =>
-        Environment.GetEnvironmentVariable("LOCAL_TRANSCRIBER_RECORDER") ?? ResolveRecorderExe();
+        Environment.GetEnvironmentVariable("TRANSCRIBER_RECORDER") ?? ResolveRecorderExe();
 
     public static string PythonExe => Mode switch
     {
@@ -69,7 +69,7 @@ public static class Paths
     public static string SettingsDir =>
         Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "LocalTranscriber");
+            "Transcriber");
 
     public static string LogsDir => SettingsDir;
 
@@ -110,7 +110,7 @@ public static class Paths
             }
             dir = dir.Parent;
         }
-        return Environment.GetEnvironmentVariable("LOCAL_TRANSCRIBER_ROOT") ?? baseDir;
+        return Environment.GetEnvironmentVariable("TRANSCRIBER_ROOT") ?? baseDir;
     }
 
     private static string ResolveRecorderExe()
@@ -136,11 +136,11 @@ public static class Paths
             return configured;
         }
 
-        // 2. portable default: Documents\LocalTranscriber\Calls
+        // 2. portable default: Documents\Transcriber\Calls
         if (Mode == AppMode.Portable)
         {
             string documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            return Path.Combine(documents, "LocalTranscriber", "Calls");
+            return Path.Combine(documents, "Transcriber", "Calls");
         }
 
         // 3. development default: project-local calls folder (existing behavior)

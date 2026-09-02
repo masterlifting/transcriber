@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 /// <summary>Structured operation lifecycle used by both CLI and Desktop renderers.</summary>
 public enum OperationStage

@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace LocalTranscriber.Core;
+namespace Transcriber.Core;
 
 /// <summary>
 /// Minimal lifecycle state for a call directory (state.json). Written at

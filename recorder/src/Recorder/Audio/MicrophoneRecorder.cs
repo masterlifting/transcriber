@@ -1,10 +1,10 @@
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using LocalTranscriber.Recorder.Diagnostics;
-using LocalTranscriber.Core.Audio;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Recorder.Diagnostics;
+using Transcriber.Core.Audio;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Recorder.Audio;
+namespace Transcriber.Recorder.Audio;
 
 /// <summary>
 /// Records a selected WASAPI capture endpoint (e.g. Shure MV6) to a WAV file

@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace LocalTranscriber.Desktop.Services;
+namespace Transcriber.Desktop.Services;
 
 /// <summary>Minimal clipboard abstraction. Implementation must run on the UI/STA thread.</summary>
 public interface IClipboardService

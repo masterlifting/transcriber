@@ -1,4 +1,4 @@
-# Local Transcriber
+# Transcriber
 
 Records two-track call audio (microphone + target application) and transcribes it
 locally with faster-whisper. No cloud, no API keys.
@@ -6,12 +6,12 @@ locally with faster-whisper. No cloud, no API keys.
 ## Layout
 
 ```
-D:\local-transcriber\
+D:\transcriber\
 ├── recorder\          C# / .NET 10 solution
 │   ├── src\Recorder\  native WASAPI capture (mic + process-loopback) -> me.wav / remote.wav
 │   ├── src\Core\      shared orchestration (paths, state, recording + transcription services)
-│   ├── src\Cli\       console entry point (local-transcriber.exe)
-│   └── src\Desktop\   WPF UI (LocalTranscriber.Desktop.exe, Material Design)
+│   ├── src\Cli\       console entry point (transcriber.exe)
+│   └── src\Desktop\   WPF UI (Transcriber.Desktop.exe, Material Design)
 ├── pipeline\          Python 3 (faster-whisper) transcription, sync and merge
 ├── calls\             development calls root (me.wav / remote.wav / session.json / transcripts)
 ├── artifacts\portable\  portable build output (ZIP + staging)
@@ -22,17 +22,17 @@ D:\local-transcriber\
 ## Quick start (development)
 
 ```powershell
-dotnet build D:\local-transcriber\recorder\LocalTranscriber.Recorder.sln -c Release
+dotnet build D:\transcriber\recorder\Transcriber.Recorder.sln -c Release
 
 # Desktop UI
-D:\local-transcriber\recorder\src\Desktop\bin\Release\net10.0-windows\LocalTranscriber.Desktop.exe
+D:\transcriber\recorder\src\Desktop\bin\Release\net10.0-windows\Transcriber.Desktop.exe
 
 # CLI
-D:\local-transcriber\recorder\src\Cli\bin\Release\net10.0-windows\local-transcriber.exe record --process Telegram --mic "Microphone Array"
+D:\transcriber\recorder\src\Cli\bin\Release\net10.0-windows\transcriber.exe record --process Telegram --mic "Microphone Array"
 ```
 
 Development mode resolves the Python environment from `.venv` and keeps calls in
-`D:\local-transcriber\calls`.
+`D:\transcriber\calls`.
 
 ## Portable package
 
@@ -40,7 +40,7 @@ Development mode resolves the Python environment from `.venv` and keeps calls in
 .\build-portable.ps1
 ```
 
-Produces `artifacts\portable\win-x64\LocalTranscriber-win-x64-full.zip`
+Produces `artifacts\portable\win-x64\Transcriber-win-x64-full.zip`
 (self-contained .NET, bundled Python 3.12 + pinned packages, bundled Whisper
 `turbo` model — works offline after extraction; no installation required).
 
@@ -54,9 +54,9 @@ audio paths.
 
 ## Data locations
 
-- Calls: `%USERPROFILE%\Documents\LocalTranscriber\Calls` (portable; configurable in the UI)
-- Settings / logs / crash log: `%LOCALAPPDATA%\LocalTranscriber`
-- Development calls: `D:\local-transcriber\calls`
+- Calls: `%USERPROFILE%\Documents\Transcriber\Calls` (portable; configurable in the UI)
+- Settings / logs / crash log: `%LOCALAPPDATA%\Transcriber`
+- Development calls: `D:\transcriber\calls`
 
 ## Commands (CLI)
 

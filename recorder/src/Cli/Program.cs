@@ -1,14 +1,14 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Text;
-using LocalTranscriber.Core;
-using LocalTranscriber.Core.Operations;
+using Transcriber.Core;
+using Transcriber.Core.Operations;
 
-namespace LocalTranscriber.Cli;
+namespace Transcriber.Cli;
 
 /// <summary>
-/// local-transcriber — console entry point. Renders the structured state
-/// emitted by LocalTranscriber.Core; all orchestration lives in Core.
+/// transcriber — console entry point. Renders the structured state
+/// emitted by Transcriber.Core; all orchestration lives in Core.
 ///
 /// Exit codes:
 ///   0  success
@@ -127,7 +127,7 @@ internal static class Program
         }
 
         Console.WriteLine();
-        Console.WriteLine("Local Transcriber");
+        Console.WriteLine("Transcriber");
         Console.WriteLine();
         Console.WriteLine($"Process     {processName ?? $"PID {pid}"}");
         Console.WriteLine($"Microphone  {mic}");
@@ -175,7 +175,7 @@ internal static class Program
             Console.WriteLine($"  {System.IO.Path.Combine(result.CallDirectory, "session.json")}");
             Console.WriteLine();
             Console.WriteLine("Retry transcription later with:");
-            Console.WriteLine($"  local-transcriber transcribe {result.CallDirectory}");
+            Console.WriteLine($"  transcriber transcribe {result.CallDirectory}");
             return ExitTranscription;
         }
 
@@ -188,7 +188,7 @@ internal static class Program
     {
         if (args.Length != 1)
         {
-            throw new UsageException("usage: local-transcriber transcribe <call-directory>");
+            throw new UsageException("usage: transcriber transcribe <call-directory>");
         }
         string dir = System.IO.Path.GetFullPath(args[0]);
         Console.WriteLine($"Transcribing {dir} ...");
@@ -219,7 +219,7 @@ internal static class Program
     /// <summary>Lightweight environment diagnostics for portable-machine debugging.</summary>
     private static int RunDiagnostics()
     {
-        Console.WriteLine("Local Transcriber environment");
+        Console.WriteLine("Transcriber environment");
         Console.WriteLine($"- Mode:        {Paths.Mode}");
         Console.WriteLine($"- App root:    {Paths.AppRoot}");
         Console.WriteLine($"- Calls root:  {Paths.CallsRoot}");
@@ -330,15 +330,15 @@ internal static class Program
     private static void PrintUsage()
     {
         Console.WriteLine();
-        Console.WriteLine("local-transcriber - record and transcribe calls (Phase 5)");
+        Console.WriteLine("transcriber - record and transcribe calls (Phase 5)");
         Console.WriteLine();
         Console.WriteLine("Usage:");
-        Console.WriteLine("  local-transcriber list-inputs");
-        Console.WriteLine("  local-transcriber list-processes [name-filter]");
-        Console.WriteLine("  local-transcriber record-mic --device <name-or-id|default> --output <file.wav> [--duration-seconds N]");
-        Console.WriteLine("  local-transcriber record-process (--process <name> | --pid <n>) --output <file.wav> [--duration-seconds N]");
-        Console.WriteLine("  local-transcriber record --process <name> [--pid <n>] [--mic <name-or-id|default>] [--duration-seconds N] [--no-transcribe]");
-        Console.WriteLine("  local-transcriber transcribe <call-directory>");
+        Console.WriteLine("  transcriber list-inputs");
+        Console.WriteLine("  transcriber list-processes [name-filter]");
+        Console.WriteLine("  transcriber record-mic --device <name-or-id|default> --output <file.wav> [--duration-seconds N]");
+        Console.WriteLine("  transcriber record-process (--process <name> | --pid <n>) --output <file.wav> [--duration-seconds N]");
+        Console.WriteLine("  transcriber record --process <name> [--pid <n>] [--mic <name-or-id|default>] [--duration-seconds N] [--no-transcribe]");
+        Console.WriteLine("  transcriber transcribe <call-directory>");
         Console.WriteLine();
         Console.WriteLine("Exit codes: 0 success | 1 general | 2 invalid arguments |");
         Console.WriteLine("            3 recording failure | 4 transcription failure | 5 dependency failure");

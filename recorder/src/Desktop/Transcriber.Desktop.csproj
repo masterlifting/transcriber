@@ -6,12 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <AssemblyName>LocalTranscriber.Desktop</AssemblyName>
-    <RootNamespace>LocalTranscriber.Desktop</RootNamespace>
+    <AssemblyName>Transcriber.Desktop</AssemblyName>
+    <RootNamespace>Transcriber.Desktop</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\LocalTranscriber.Core.csproj" />
+    <ProjectReference Include="..\Core\Transcriber.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

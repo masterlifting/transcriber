@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using LocalTranscriber.Core.Diagnostics;
-using LocalTranscriber.Core.Interop;
+using Transcriber.Core.Diagnostics;
+using Transcriber.Core.Interop;
 
-namespace LocalTranscriber.Core.Processes;
+namespace Transcriber.Core.Processes;
 
 public sealed record ProcessInfo(
     int Pid,

@@ -1,4 +1,4 @@
-namespace LocalTranscriber.Core;
+namespace Transcriber.Core;
 
 public sealed class UsageException : Exception
 {

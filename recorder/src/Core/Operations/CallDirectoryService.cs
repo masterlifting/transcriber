@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace LocalTranscriber.Core.Operations;
+namespace Transcriber.Core.Operations;
 
 /// <summary>
 /// Safe deletion of a call directory. Guards: the directory must be directly

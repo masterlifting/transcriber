@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace LocalTranscriber.Recorder.Recording;
+namespace Transcriber.Recorder.Recording;
 
 /// <summary>
 /// session.json model for a two-track recording session.

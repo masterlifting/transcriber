@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.IO;
 
-namespace LocalTranscriber.Desktop.Services;
+namespace Transcriber.Desktop.Services;
 
 /// <summary>Opens files/folders with the default Windows shell behavior.</summary>
 public static class ShellService

@@ -6,15 +6,15 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
-using LocalTranscriber.Core;
-using LocalTranscriber.Core.Audio;
-using LocalTranscriber.Core.Operations;
-using LocalTranscriber.Core.Processes;
-using LocalTranscriber.Core.Settings;
-using LocalTranscriber.Desktop.Models;
-using LocalTranscriber.Desktop.Services;
+using Transcriber.Core;
+using Transcriber.Core.Audio;
+using Transcriber.Core.Operations;
+using Transcriber.Core.Processes;
+using Transcriber.Core.Settings;
+using Transcriber.Desktop.Models;
+using Transcriber.Desktop.Services;
 
-namespace LocalTranscriber.Desktop.ViewModels;
+namespace Transcriber.Desktop.ViewModels;
 
 public enum UiStage
 {

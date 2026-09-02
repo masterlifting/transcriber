@@ -1,12 +1,12 @@
-using LocalTranscriber.Recorder.Audio;
-using LocalTranscriber.Recorder.Diagnostics;
-using LocalTranscriber.Core.Audio;
-using LocalTranscriber.Core.Interop;
-using LocalTranscriber.Recorder.ProcessAudio;
-using LocalTranscriber.Core.Processes;
-using LocalTranscriber.Recorder.Recording;
+using Transcriber.Recorder.Audio;
+using Transcriber.Recorder.Diagnostics;
+using Transcriber.Core.Audio;
+using Transcriber.Core.Interop;
+using Transcriber.Recorder.ProcessAudio;
+using Transcriber.Core.Processes;
+using Transcriber.Recorder.Recording;
 
-namespace LocalTranscriber.Recorder;
+namespace Transcriber.Recorder;
 
 internal static class Program
 {
@@ -268,7 +268,7 @@ internal static class Program
     private static void PrintUsage()
     {
         Console.WriteLine();
-        Console.WriteLine("LocalTranscriber.Recorder - two-track Windows call recorder (prototype)");
+        Console.WriteLine("Transcriber.Recorder - two-track Windows call recorder (prototype)");
         Console.WriteLine();
         Console.WriteLine("Usage:");
         Console.WriteLine("  recorder list-inputs");

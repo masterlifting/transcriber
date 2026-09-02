@@ -1,13 +1,13 @@
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using LocalTranscriber.Recorder.Audio;
-using LocalTranscriber.Recorder.Diagnostics;
-using LocalTranscriber.Recorder.ProcessAudio;
-using LocalTranscriber.Core.Audio;
-using LocalTranscriber.Core.Processes;
+using Transcriber.Recorder.Audio;
+using Transcriber.Recorder.Diagnostics;
+using Transcriber.Recorder.ProcessAudio;
+using Transcriber.Core.Audio;
+using Transcriber.Core.Processes;
 
-namespace LocalTranscriber.Recorder.Recording;
+namespace Transcriber.Recorder.Recording;
 
 /// <summary>
 /// Combined two-track recording: microphone -> me.wav and process loopback

@@ -1,8 +1,8 @@
 using System.ComponentModel;
 using System.Windows;
-using LocalTranscriber.Desktop.ViewModels;
+using Transcriber.Desktop.ViewModels;
 
-namespace LocalTranscriber.Desktop;
+namespace Transcriber.Desktop;
 
 public partial class MainWindow : Window
 {
@@ -24,7 +24,7 @@ public partial class MainWindow : Window
             {
                 var result = MessageBox.Show(
                     "A recording is currently in progress.\n\nStop recording and exit?",
-                    "Local Transcriber",
+                    "Transcriber",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question);
                 e.Cancel = true; // let the operation finalize gracefully first
@@ -38,7 +38,7 @@ public partial class MainWindow : Window
             {
                 var result = MessageBox.Show(
                     "Transcription is still running.\n\nCancel transcription and exit?",
-                    "Local Transcriber",
+                    "Transcriber",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question);
                 e.Cancel = true;

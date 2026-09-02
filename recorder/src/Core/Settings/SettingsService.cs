@@ -1,14 +1,14 @@
 using System.Text.Json;
 
-namespace LocalTranscriber.Core.Settings;
+namespace Transcriber.Core.Settings;
 
-/// <summary>User preferences persisted in %LOCALAPPDATA%\LocalTranscriber\settings.json.</summary>
+/// <summary>User preferences persisted in %LOCALAPPDATA%\Transcriber\settings.json.</summary>
 public sealed class AppSettings
 {
     public string? LastApplication { get; set; }
     public string? LastMicrophone { get; set; } // stable endpoint id or "default"
 
-    /// <summary>Optional override for the calls directory (defaults to Documents\LocalTranscriber\Calls in portable mode).</summary>
+    /// <summary>Optional override for the calls directory (defaults to Documents\Transcriber\Calls in portable mode).</summary>
     public string? CallsDirectory { get; set; }
 }
 
@@ -23,7 +23,7 @@ public static class SettingsService
     public static string SettingsPath =>
         Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "LocalTranscriber",
+            "Transcriber",
             "settings.json");
 
     public static AppSettings Load()
