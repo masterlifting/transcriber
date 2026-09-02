@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>recorder</AssemblyName>
+    <RootNamespace>LocalTranscriber.Recorder</RootNamespace>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <!-- No NuGet package dependencies: all Windows audio capture uses native P/Invoke. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\LocalTranscriber.Core.csproj" />
+  </ItemGroup>
+
+</Project>

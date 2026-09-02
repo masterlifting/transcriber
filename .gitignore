@@ -1,0 +1,20 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# .NET and IDE build output
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# User recordings/transcripts and generated distribution output
+calls/
+artifacts/
+
+# Local secrets and machine configuration
+.env
+.env.*
+*.pfx
+*.p12
+*.key
